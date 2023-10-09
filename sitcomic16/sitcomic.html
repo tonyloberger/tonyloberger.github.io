@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/myMovies.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<h1>My Memorable Movie</h1>
+<h3><span class="ital">Holy Hill</span> (Tony Loberger, 2020)</h3>
+	
+	<div class="sideBySide">
+	<img class="filmstill" onClick="onClick_DTRT_img01()" src="images/1.png" alt=>
+	<img class="filmstill" onClick="onClick_DTRT_img02()" src="images/2.png" alt=>
+	<img class="filmstill" onClick="onClick_DTRT_img03()" src="images/3.png" alt=>
+	</div>
+	
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus consequuntur, excepturi vitae nobis accusamus doloribus deserunt praesentium facilis odio, expedita ullam ex amet ipsa consectetur, ratione quis magni est itaque minima necessitatibus? Temporibus aperiam magnam quod minus placeat sit voluptatibus animi, cum, culpa facere facilis, illo voluptate alias vitae ipsam</p>
+	
+</body>
+<script>
+	
+var DTRT_text = document.getElementById("DTRT_text");
+var DRT00 = "This is the first short film I have ever made with my drone. I flew it around Holy Hill in Wisconsin and got some cool clips after a winter snowfall. This was a very fun time in my life and I am glad that I was able to get out and film this amazing piece.";
+	
+var DRT01 = "This is a picture of Holy Hill as I flew over with my drone. This was a night after a heavy snowfall, but it was also kind of warm so the snow stuck to everything it fell on. Me and my friend left super early in the morning to get these shots as the sun was rising and while the snow was still stuck to the trees and everything around it";
+
+var DRT02 = "This is an image during the video of one of the point tops of Holy Hill. It was super foggy and hard to see but this image was amazing and it made me smile as I was flying through there. You will never know the amazing shot that you might be able to get if you never fly and try!";
+	
+var DRT03 = "This is the final shot I took while I was flying my drone. It was from very far away and I slowly came in. It gave the vast area of land around Holy Hill that was covered in snow and it was truly beautiful. This film was one of my favorite to ever make and I am glad that I did and I had a ton of fun in doing so.";
+	
+	
+DTRT_text.innerHTML = DRT00;
+	
+function onClick_DTRT_img01(){
+	DTRT_text.innerHTML = DRT01;
+}
+	
+function onClick_DTRT_img02(){
+	DTRT_text.innerHTML = DRT02;
+}
+
+function onClick_DTRT_img03(){
+	DTRT_text.innerHTML = DRT03;
+}
+	
+	
+</script>
+</html>
