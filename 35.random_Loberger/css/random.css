@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.sideBySide {
+	display: flex;
+}
+.hillImage {
+	width: 400px;
+	border-style: solid;
+}
