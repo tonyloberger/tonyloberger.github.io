@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/changingVideos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+<video id="vid" src="video/video_One.mp4" onClick="switchVideo()" controls="controls" muted="muted" loop="loop" type="video/mp4">
+</video>
+
+</div>
+</body>
+	
+<script>
+
+var vid = document.getElementById("vid");
+	
+var intro = "video/video_One.mp4";
+var second = "video/video_Two.mp4";
+var count = "video/video_Three.mp4";
+var red = "video/video_Four.mp4";
+	
+var channel = 0;
+var pausedAt = 0;
+	
+function switchVideo(){
+	channel ++;
+	pausedAt = vid.currentTime;
+	console.log(vid.currentTime);
+	
+	if (channel == 1){
+		vid.src =intro;
+		vid.currentTime = pausedAt;
+	}
+	
+	if (channel == 2){
+		vid.src = second;
+		vid.currentTime = pausedAt;
+	}
+	
+	if (channel == 3){
+		vid.src = count;
+		vid.currentTime = pausedAt;
+	}
+	
+	if (channel == 4){
+		vid.src = red;
+		vid.currentTime = pausedAt;
+		channel = 0;
+	}
+	
+	vid.play();
+	vid.muted = false;
+}
+	
+</script>
+
+
+</html>
