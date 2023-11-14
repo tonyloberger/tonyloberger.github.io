@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/fishing.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<div>
+<video id="displayed_video" muted="muted" loop="loop" autoplay="autoplay" >
+<source src="video/video.mp4" type="video/mp4">
+</video>
+</div>
+	
+<div class="centered_text">
+<h1 id="truism" onmouseover="onTruismText()" onmouseout="outTruismText()" onClick="changeVideo()">Worrying Can Help You Prepare</h1>
+</div>
+
+<script>
+	
+var channel = 1;
+var pausedAt = 0;
+
+var displayed_video = document.getElementById("displayed_video");
+	
+var videoOne = "video/video.mp4";
+var videoTwo = "video/keyboard.mp4";
+
+var mySound = new Audio("sounds/study_music.mp3");
+	
+
+function onTruismText(){
+	document.getElementById("displayed_video").style.filter = "sepia(100%)";
+}
+
+function outTruismText(){
+	document.getElementById("displayed_video").style.filter = "sepia(0%)";
+}
+	
+function changeVideo(){
+	console.log("will change video");
+	pausedAt = displayed_video.currentTime;
+	if (channel == 0){
+		displayed_video.src = videoOne;
+		displayed_video.currentTime = pausedAt;
+		channel =1;
+	}
+	else{
+		displayed_video.src = videoTwo;
+		displayed_video.currentTime = pausedAt;
+		channel = 0;
+	}
+	
+	mySound.play();
+}
+
+</script>
+</body>
+</html>

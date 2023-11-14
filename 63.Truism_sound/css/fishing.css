@@ -1,0 +1,27 @@
+@charset "UTF-8";
+#displayed_video {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.centered_text {
+	position: relative;
+	text-align:  center;
+	justify-content: center;
+	margin-top: 85vh;
+}
+#truism {
+	font-family: Impact, Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-style: oblique;
+	border-width: thin;
+	border-style: solid;
+	margin-left: 30%;
+	margin-right: 30%;
+	background-color: #A9DD21;
+	cursor: default;
+	text-shadow: 2px 2px #000000;
+}
